@@ -19,10 +19,15 @@
     --white:#fff;
     --tt-pink:#f820a3;
     --tt-gold:#ffa945;
-    --tt-gradient-1:linear-gradient(90deg, var(--tt-pink) 0%, var(--tt-gold) 100%);
-    --tt-gradient-2:linear-gradient(90deg, var(--tt-gold) 0%, var(--tt-pink) 100%);
+    --tt-gradient-1:linear-gradient(90deg, var(--vader-black) 0%, var(--vader-red) 100%);
+    --tt-gradient-2:linear-gradient(90deg, var(--vader-red) 0%, var(--vader-black) 100%);
     --transition-06: all 0.6s ease-in-out;
     --transition-04: all 0.4s ease-in-out;
+    --vader-black: #000000;
+    --vader-red: #FF0000;
+    --vader-gray: #2F2F2F;
+    --vader-silver: #C0C0C0;
+    --vader-white: #FFFFFF;
 }
 
 
@@ -64,10 +69,16 @@
 
 
 body{
-    background-color:#2d2d2d;
+    background-color: var(--vader-black);
+    color: var(--vader-white);
+    margin: 0;
+    padding: 0;
 }
 
 nav{
+    background-color: var(--vader-gray);
+    border-bottom: 2px solid var(--vader-red);
+    padding: 15px;
     height: 90px;
     width: 90%;
     display: flex;
@@ -210,4 +221,75 @@ nav .menu li a:hover{
         -webkit-text-fill-color: var(--white);
         
     }
+}
+
+/* Boutons de navigation */
+nav .nav-link,
+nav button {
+  background: linear-gradient(145deg, var(--vader-black) 60%, var(--vader-red) 100%);
+  color: var(--vader-white);
+  padding: 10px 20px;
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  margin: 0 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+nav .nav-link:hover,
+nav button:hover {
+  background: linear-gradient(145deg, var(--vader-red) 0%, var(--vader-black) 100%);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+  border-color: var(--vader-red);
+  transform: translateY(-2px);
+}
+
+/* Bouton À propos spécifique */
+.about-button {
+  background-color: var(--vader-black);
+  color: var(--vader-white);
+  border: 1px solid var(--vader-red);
+  transition: all 0.3s ease;
+}
+
+.about-button:hover {
+  background: linear-gradient(145deg, var(--vader-black), var(--vader-red));
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+}
+
+/* Section introduction */
+.spacer {
+  height: 80px;
+}
+
+.vader-intro {
+  padding: 20px;
+  border-left: 3px solid var(--vader-red);
+  background-color: rgba(47, 47, 47, 0.3);
+  margin: 0 20px;
+}
+
+.vader-name {
+  font-size: 1.2rem;
+  color: var(--vader-white);
+  margin: 0;
+}
+
+.label {
+  color: var(--vader-red);
+  font-weight: bold;
+}
+
+.note {
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* Autres éléments de l'interface */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
