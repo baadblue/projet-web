@@ -28,6 +28,8 @@
     --vader-gray: #2F2F2F;
     --vader-silver: #C0C0C0;
     --vader-white: #FFFFFF;
+    --imperial-gradient: linear-gradient(135deg, var(--vader-black) 0%, var(--vader-red) 100%);
+    --dark-overlay: rgba(0, 0, 0, 0.7);
 }
 
 
@@ -292,4 +294,565 @@ nav button:hover {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+/* Style de la section héro */
+.hero-section {
+    height: 100vh;
+    position: relative;
+    background-image: url('../sources/vader-background.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--dark-overlay);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--vader-white);
+    text-shadow: 0 0 10px var(--vader-red);
+}
+
+.tagline {
+    font-size: 1.5rem;
+    color: var(--vader-silver);
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+/* Style des boutons impériaux */
+.imperial-btn {
+    background: var(--imperial-gradient);
+    border: 2px solid var(--vader-red);
+    padding: 15px 30px;
+    color: var(--vader-white);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.imperial-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--vader-red);
+}
+
+/* Modification de la navbar */
+nav {
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+}
+
+/* Styles communs pour les sections */
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--vader-white);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px var(--vader-red);
+}
+
+/* Section Compétences */
+.skills-section {
+    padding: 100px 0;
+    background: var(--vader-gray);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.skill-card {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid var(--vader-red);
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px var(--vader-red);
+}
+
+.skill-card i {
+    font-size: 3rem;
+    color: var(--vader-red);
+    margin-bottom: 20px;
+}
+
+.skill-card h3 {
+    color: var(--vader-white);
+    margin-bottom: 15px;
+}
+
+.skill-card ul li {
+    color: var(--vader-silver);
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.skill-card ul li::before {
+    content: "→";
+    color: var(--vader-red);
+    position: absolute;
+    left: 0;
+}
+
+/* Section Projets */
+.projects-section {
+    padding: 100px 0;
+    background: var(--vader-black);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    aspect-ratio: 16/9;
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-overlay {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+    bottom: 0;
+}
+
+/* Section Contact */
+.contact-section {
+    padding: 100px 0;
+    background: var(--vader-gray);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    padding: 0 20px;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: var(--vader-silver);
+}
+
+.contact-list i {
+    color: var(--vader-red);
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--vader-red);
+    color: var(--vader-white);
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Section À propos */
+.about-section {
+    padding: 120px 0;
+    background: var(--vader-black);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../sources/empire-pattern.png') repeat;
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-image {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.2);
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.05);
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.about-card {
+    background: rgba(47, 47, 47, 0.5);
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 4px solid var(--vader-red);
+}
+
+.about-card h3 {
+    color: var(--vader-red);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.about-text {
+    color: var(--vader-silver);
+    line-height: 1.6;
+}
+
+.about-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+}
+
+.stat-item i {
+    font-size: 2rem;
+    color: var(--vader-red);
+    margin-bottom: 10px;
+}
+
+.stat-number {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--vader-white);
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    color: var(--vader-silver);
+    font-size: 0.9rem;
+}
+
+.about-quote {
+    position: relative;
+    padding: 30px;
+    background: var(--imperial-gradient);
+    border-radius: 10px;
+}
+
+.about-quote i {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.1);
+}
+
+.about-quote p {
+    color: var(--vader-white);
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-left: 40px;
+}
+
+.about-hobbies {
+    background: rgba(47, 47, 47, 0.5);
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.about-hobbies h4 {
+    color: var(--vader-red);
+    margin-bottom: 15px;
+}
+
+.about-hobbies ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-hobbies li {
+    color: var(--vader-silver);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.about-hobbies i {
+    color: var(--vader-red);
+}
+
+/* Media Queries pour la section À propos */
+@media screen and (max-width: 992px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-image {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .about-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .about-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-item {
+        padding: 15px;
+    }
+}
+
+/* Modification du style de la sidebar */
+.sidebar_menu {
+    min-height: 100vh;
+    width: 300px;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    right: -100%;
+    top: 0;
+    transition: var(--transition-04);
+    border-left: 2px solid var(--vader-red);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.sidebar_menu.active {
+    right: 0;
+}
+
+.sidebar_top {
+    padding: 20px 0;
+}
+
+.sidebar_logo a {
+    color: var(--vader-red);
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.sidebar_top li {
+    padding: 15px 25px;
+    border-bottom: 1px solid rgba(255, 0, 0, 0.1);
+    transition: var(--transition-04);
+}
+
+.sidebar_top li:hover {
+    background: rgba(255, 0, 0, 0.1);
+}
+
+.sidebar_top li a {
+    color: var(--vader-white);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1rem;
+    transition: var(--transition-04);
+}
+
+.sidebar_top li a i {
+    font-size: 1.2rem;
+    color: var(--vader-red);
+}
+
+.sidebar_top li:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 15px;
+}
+
+#close_menu {
+    font-size: 1.5rem;
+    color: var(--vader-red);
+    cursor: pointer;
+    transition: var(--transition-04);
+}
+
+#close_menu:hover {
+    transform: rotate(90deg);
+}
+
+.sidebar_bottom {
+    padding: 30px 25px;
+    border-top: 1px solid rgba(255, 0, 0, 0.1);
+}
+
+.sidebar_bottom .btn {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.social_Icon {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social_Icon a {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--vader-red);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-04);
+}
+
+.social_Icon a i {
+    color: var(--vader-red);
+    font-size: 1.2rem;
+    transition: var(--transition-04);
+}
+
+.social_Icon a:hover {
+    background: var(--vader-red);
+}
+
+.social_Icon a:hover i {
+    color: var(--vader-white);
+}
+
+/* Modification du bouton d'ouverture du menu */
+#open_menu {
+    color: var(--vader-red);
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: var(--transition-04);
+}
+
+#open_menu:hover {
+    transform: scale(1.1);
+}
+
+/* Media Query pour la sidebar */
+@media screen and (max-width: 576px) {
+    .sidebar_menu {
+        width: 100%;
+    }
 }
