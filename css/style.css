@@ -11,27 +11,45 @@
 }
 
 :root{
-    --tRed:#FF0000;
-    --ttLightRed:#F2EEEA;
-    --ttGray:#b5b5b5;
-    --ttGray2:#808080;
-    --black:#000;
-    --white:#fff;
-    --tt-pink:#f820a3;
-    --tt-gold:#ffa945;
-    --tt-gradient-1:linear-gradient(90deg, var(--vader-black) 0%, var(--vader-red) 100%);
-    --tt-gradient-2:linear-gradient(90deg, var(--vader-red) 0%, var(--vader-black) 100%);
-    --transition-06: all 0.6s ease-in-out;
-    --transition-04: all 0.4s ease-in-out;
+    /* Couleurs principales */
     --vader-black: #000000;
     --vader-red: #FF0000;
     --vader-gray: #2F2F2F;
     --vader-silver: #C0C0C0;
     --vader-white: #FFFFFF;
+    
+    /* Couleurs d'interface */
+    --text-primary: var(--vader-white);
+    --text-secondary: var(--vader-silver);
+    --background-primary: var(--vader-black);
+    --background-secondary: var(--vader-gray);
+    
+    /* Couleurs d'accentuation */
+    --accent-primary: var(--vader-red);
+    --accent-hover: rgba(255, 0, 0, 0.1);
+    --accent-border: rgba(255, 0, 0, 0.3);
+    
+    /* Gradients */
     --imperial-gradient: linear-gradient(135deg, var(--vader-black) 0%, var(--vader-red) 100%);
+    --imperial-gradient-reverse: linear-gradient(135deg, var(--vader-red) 0%, var(--vader-black) 100%);
+    --nav-gradient: linear-gradient(145deg, var(--vader-black) 60%, var(--vader-red) 100%);
+    --nav-gradient-hover: linear-gradient(145deg, var(--vader-red) 0%, var(--vader-black) 100%);
+    
+    /* Overlays et backgrounds */
     --dark-overlay: rgba(0, 0, 0, 0.7);
+    --card-overlay: rgba(0, 0, 0, 0.5);
+    --nav-background: rgba(0, 0, 0, 0.9);
+    
+    /* Effets et ombres */
+    --glow-shadow: 0 0 12px var(--vader-red);
+    --hover-shadow: 0 0 20px var(--vader-red);
+    --text-shadow: 0 0 20px var(--vader-red);
+    
+    /* Transitions */
+    --transition-fast: all 0.3s ease;
+    --transition-medium: all 0.4s ease-in-out;
+    --transition-slow: all 0.6s ease-in-out;
 }
-
 
 /* Common Css */
 .btn{
@@ -71,17 +89,17 @@
 
 
 body{
-    background-color: var(--vader-black);
-    color: var(--vader-white);
+    background-color: var(--background-primary);
+    color: var(--text-primary);
     margin: 0;
     padding: 0;
 }
 
 nav{
-    background-color: var(--vader-gray);
-    border-bottom: 2px solid var(--vader-red);
-    padding: 15px;
-    height: 90px;
+    background-color: var(--background-secondary);
+    border-bottom: 2px solid var(--accent-primary);
+    padding: 0 6%;
+    height: 120px;
     width: 90%;
     display: flex;
     justify-content: space-between;
@@ -97,12 +115,34 @@ nav{
 }
 
 nav .logo{
-    width: 130px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
 }
+
+.logo-image {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    filter: drop-shadow(var(--glow-shadow));
+    animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0%, 100% {
+        filter: drop-shadow(var(--glow-shadow));
+    }
+    50% {
+        filter: drop-shadow(0 0 25px var(--vader-red));
+        transform: scale(1.08);
+    }
+}
+
 .logo a{
-    font-size:2rem;
-    font-weight: 400;
-    color: var(--black);    
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    text-shadow: var(--text-shadow);
 }
 
 nav .menu{
@@ -228,11 +268,11 @@ nav .menu li a:hover{
 /* Boutons de navigation */
 nav .nav-link,
 nav button {
-  background: linear-gradient(145deg, var(--vader-black) 60%, var(--vader-red) 100%);
+  background: var(--nav-gradient);
   color: var(--vader-white);
   padding: 10px 20px;
-  border: 1px solid rgba(255, 0, 0, 0.3);
-  transition: all 0.3s ease;
+  border: 1px solid var(--accent-border);
+  transition: var(--transition-fast);
   text-decoration: none;
   margin: 0 5px;
   border-radius: 4px;
@@ -241,9 +281,9 @@ nav button {
 
 nav .nav-link:hover,
 nav button:hover {
-  background: linear-gradient(145deg, var(--vader-red) 0%, var(--vader-black) 100%);
-  box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
-  border-color: var(--vader-red);
+  background: var(--nav-gradient-hover);
+  box-shadow: 0 0 10px var(--accent-border);
+  border-color: var(--accent-primary);
   transform: translateY(-2px);
 }
 
@@ -252,13 +292,13 @@ nav button:hover {
   background-color: var(--vader-black);
   color: var(--vader-white);
   border: 1px solid var(--vader-red);
-  transition: all 0.3s ease;
+  transition: var(--transition-fast);
 }
 
 .about-button:hover {
   background: linear-gradient(145deg, var(--vader-black), var(--vader-red));
   transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+  box-shadow: 0 0 10px var(--accent-border);
 }
 
 /* Section introduction */
@@ -332,7 +372,7 @@ nav button:hover {
     text-transform: uppercase;
     letter-spacing: 2px;
     color: var(--vader-white);
-    text-shadow: 0 0 10px var(--vader-red);
+    text-shadow: var(--text-shadow);
 }
 
 .tagline {
@@ -351,19 +391,19 @@ nav button:hover {
     font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    transition: all 0.3s ease;
+    transition: var(--transition-fast);
     position: relative;
     overflow: hidden;
 }
 
 .imperial-btn:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 20px var(--vader-red);
+    box-shadow: var(--hover-shadow);
 }
 
 /* Modification de la navbar */
 nav {
-    background: rgba(0, 0, 0, 0.9);
+    background: var(--nav-background);
     backdrop-filter: blur(10px);
 }
 
@@ -375,13 +415,13 @@ nav {
     color: var(--vader-white);
     text-transform: uppercase;
     letter-spacing: 2px;
-    text-shadow: 0 0 10px var(--vader-red);
+    text-shadow: var(--text-shadow);
 }
 
 /* Section Compétences */
 .skills-section {
     padding: 100px 0;
-    background: var(--vader-gray);
+    background: var(--background-secondary);
 }
 
 .skills-grid {
@@ -392,21 +432,21 @@ nav {
 }
 
 .skill-card {
-    background: rgba(0, 0, 0, 0.5);
+    background: var(--card-overlay);
     padding: 30px;
     border-radius: 10px;
-    border: 1px solid var(--vader-red);
-    transition: all 0.3s ease;
+    border: 1px solid var(--accent-primary);
+    transition: var(--transition-fast);
 }
 
 .skill-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0 20px var(--vader-red);
+    box-shadow: var(--hover-shadow);
 }
 
 .skill-card i {
     font-size: 3rem;
-    color: var(--vader-red);
+    color: var(--accent-primary);
     margin-bottom: 20px;
 }
 
@@ -424,7 +464,7 @@ nav {
 
 .skill-card ul li::before {
     content: "→";
-    color: var(--vader-red);
+    color: var(--accent-primary);
     position: absolute;
     left: 0;
 }
@@ -468,7 +508,7 @@ nav {
     width: 100%;
     padding: 20px;
     background: rgba(0, 0, 0, 0.8);
-    transition: all 0.3s ease;
+    transition: var(--transition-fast);
 }
 
 .project-card:hover .project-overlay {
@@ -478,7 +518,7 @@ nav {
 /* Section Contact */
 .contact-section {
     padding: 100px 0;
-    background: var(--vader-gray);
+    background: var(--background-secondary);
 }
 
 .contact-grid {
@@ -496,7 +536,7 @@ nav {
 }
 
 .contact-list i {
-    color: var(--vader-red);
+    color: var(--accent-primary);
     font-size: 1.5rem;
     margin-right: 15px;
 }
@@ -510,7 +550,7 @@ nav {
     width: 100%;
     padding: 15px;
     background: rgba(0, 0, 0, 0.5);
-    border: 1px solid var(--vader-red);
+    border: 1px solid var(--accent-primary);
     color: var(--vader-white);
     border-radius: 5px;
 }
@@ -596,11 +636,11 @@ nav {
     background: rgba(47, 47, 47, 0.5);
     padding: 30px;
     border-radius: 10px;
-    border-left: 4px solid var(--vader-red);
+    border-left: 4px solid var(--accent-primary);
 }
 
 .about-card h3 {
-    color: var(--vader-red);
+    color: var(--accent-primary);
     margin-bottom: 15px;
     font-size: 1.5rem;
 }
@@ -630,7 +670,7 @@ nav {
 
 .stat-item i {
     font-size: 2rem;
-    color: var(--vader-red);
+    color: var(--accent-primary);
     margin-bottom: 10px;
 }
 
@@ -676,7 +716,7 @@ nav {
 }
 
 .about-hobbies h4 {
-    color: var(--vader-red);
+    color: var(--accent-primary);
     margin-bottom: 15px;
 }
 
@@ -694,7 +734,7 @@ nav {
 }
 
 .about-hobbies i {
-    color: var(--vader-red);
+    color: var(--accent-primary);
 }
 
 /* Media Queries pour la section À propos */
@@ -733,7 +773,7 @@ nav {
     right: -100%;
     top: 0;
     transition: var(--transition-04);
-    border-left: 2px solid var(--vader-red);
+    border-left: 2px solid var(--accent-primary);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -749,7 +789,7 @@ nav {
 }
 
 .sidebar_logo a {
-    color: var(--vader-red);
+    color: var(--accent-primary);
     font-size: 1.5rem;
     font-weight: 600;
     letter-spacing: 1px;
@@ -776,7 +816,7 @@ nav {
 
 .sidebar_top li a i {
     font-size: 1.2rem;
-    color: var(--vader-red);
+    color: var(--accent-primary);
 }
 
 .sidebar_top li:first-child {
@@ -788,7 +828,7 @@ nav {
 
 #close_menu {
     font-size: 1.5rem;
-    color: var(--vader-red);
+    color: var(--accent-primary);
     cursor: pointer;
     transition: var(--transition-04);
 }
@@ -816,7 +856,7 @@ nav {
 .social_Icon a {
     width: 40px;
     height: 40px;
-    border: 1px solid var(--vader-red);
+    border: 1px solid var(--accent-primary);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -825,13 +865,13 @@ nav {
 }
 
 .social_Icon a i {
-    color: var(--vader-red);
+    color: var(--accent-primary);
     font-size: 1.2rem;
     transition: var(--transition-04);
 }
 
 .social_Icon a:hover {
-    background: var(--vader-red);
+    background: var(--accent-primary);
 }
 
 .social_Icon a:hover i {
@@ -840,7 +880,7 @@ nav {
 
 /* Modification du bouton d'ouverture du menu */
 #open_menu {
-    color: var(--vader-red);
+    color: var(--accent-primary);
     font-size: 1.8rem;
     cursor: pointer;
     transition: var(--transition-04);
