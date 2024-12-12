@@ -10,14 +10,24 @@ close_menu.addEventListener('click', function(){
     menu.classList.remove('active')
 })
 
-// Ajout du défilement fluide
+// Modifier le défilement fluide pour prendre en compte la navbar
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const section = document.querySelector(this.getAttribute('href'));
-        section.scrollIntoView({
+        const navbarHeight = document.querySelector('.navbar').offsetHeight;
+        const targetPosition = section.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+        
+        window.scrollTo({
+            top: targetPosition,
             behavior: 'smooth'
         });
+        
+        // Fermer le menu sidebar si ouvert (pour mobile)
+        const menu = document.querySelector('.sidebar_menu');
+        if (menu.classList.contains('active')) {
+            menu.classList.remove('active');
+        }
     });
 });
 
