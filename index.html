@@ -52,64 +52,78 @@
    </nav>
 
    <section id="accueil" class="hero-section">
+        <div class="tech-decoration top-left"></div>
         <div class="hero-content">
             <h1>Dark Vador</h1>
-            <p class="tagline">"Ce n'est pas parce que je suis dans le côté obscur que je ne peux pas briller."</p>
+            <h2 class="tech-title">Architecte des Défenses Impériales</h2>
+            <p class="tagline">"La sécurité n'est pas une option. C'est une question de survie."</p>
             <div class="hero-cta">
                 <button class="btn imperial-btn">
-                    <a href="#contact">Rejoignez l'Empire</a>
+                    <span class="tech-text">Audit de Sécurité</span>
                 </button>
+                <div class="security-status">
+                    <span class="status-text">Niveau de menace</span>
+                    <span class="status-indicator">CRITIQUE</span>
+                </div>
             </div>
         </div>
-        <div class="hero-overlay"></div>
+        <div class="tech-decoration bottom-right"></div>
    </section>
 
    <section id="a-propos" class="about-section">
     <div class="container">
-        <h2 class="section-title">À Propos du Seigneur Noir</h2>
+        <h2 class="section-title">Identité Système</h2>
         
         <div class="about-grid">
             <div class="about-image">
-                <img src="sources/vader-portrait.jpg" alt="Dark Vador dramatique">
-                <div class="image-overlay"></div>
+                <img src="sources/vader-portrait.jpg" alt="Dark Vador">
+                <div class="system-scan"></div>
             </div>
             
             <div class="about-content">
                 <div class="about-card">
-                    <h3>Qui suis-je ?</h3>
-                    <p class="about-text">Seigneur Sith, Commandant Suprême de l'Empire Galactique et Roi des Respirations ASMR. Mon parcours m'a mené du statut de Jedi prometteur à celui d'icône galactique de l'ordre et de la puissance.</p>
+                    <div class="card-header">
+                        <i class="ri-shield-user-line"></i>
+                        <h3>Identification</h3>
+                    </div>
+                    <p class="about-text">Expert en cybersécurité, Architecte des défenses impériales et Maître de l'OS Obscur. Ancien Jedi reconverti dans la sécurité offensive après une mise à jour majeure du système.</p>
                 </div>
 
                 <div class="about-stats">
                     <div class="stat-item">
-                        <i class="ri-sword-fill"></i>
-                        <span class="stat-number">1000+</span>
-                        <span class="stat-label">Rebelles neutralisés</span>
+                        <i class="ri-bug-line"></i>
+                        <span class="stat-number">10K+</span>
+                        <span class="stat-label">Failles corrigées</span>
                     </div>
                     <div class="stat-item">
-                        <i class="ri-planet-fill"></i>
-                        <span class="stat-number">50K+</span>
-                        <span class="stat-label">Systèmes conquis</span>
+                        <i class="ri-shield-check-line"></i>
+                        <span class="stat-number">99.9%</span>
+                        <span class="stat-label">Uptime système</span>
                     </div>
                     <div class="stat-item">
-                        <i class="ri-team-fill"></i>
+                        <i class="ri-code-box-line"></i>
                         <span class="stat-number">1M+</span>
-                        <span class="stat-label">Stormtroopers commandés</span>
+                        <span class="stat-label">Lignes de code</span>
                     </div>
                 </div>
 
-                <div class="about-quote">
-                    <i class="ri-double-quotes-l"></i>
-                    <p>"Ne sous-estimez jamais le pouvoir de l'obscurité... ni ma capacité à faire une entrée dramatique."</p>
-                </div>
-
-                <div class="about-hobbies">
-                    <h4>Centres d'intérêt</h4>
-                    <ul>
-                        <li><i class="ri-gamepad-fill"></i> Spatio-foot avec Loan ORDVPN</li>
-                        <li><i class="ri-fire-fill"></i> Sabre laser artistique</li>
-                        <li><i class="ri-star-fill"></i> Contemplation stellaire depuis l'Étoile de la Mort</li>
-                    </ul>
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <span class="terminal-title">terminal@deathstar</span>
+                        <div class="terminal-buttons">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="terminal-content">
+                        <p><span class="prompt">$</span> whoami</p>
+                        <p class="response">DarkVador@EmpireGalactic</p>
+                        <p><span class="prompt">$</span> cat skills.txt</p>
+                        <p class="response">Pentesting avancé</p>
+                        <p class="response">Exploitation des failles</p>
+                        <p class="response">Architecture sécurisée</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -118,37 +132,52 @@
 
     <section id="competences" class="skills-section">
         <div class="container">
-            <h2 class="section-title">Compétences Impériales</h2>
+            <h2 class="section-title">Arsenal Cybernétique</h2>
             
             <div class="skills-grid">
-                <div class="skill-card">
-                    <i class="ri-sword-line"></i>
-                    <h3>Leadership Stratégique</h3>
+                <div class="skill-card offensive">
+                    <div class="card-header">
+                        <i class="ri-shield-cross-line"></i>
+                        <h3>Offensive</h3>
+                    </div>
                     <ul>
-                        <li>Commandement d'armées interstellaires</li>
-                        <li>Discours intimidants</li>
-                        <li>Team building radical</li>
+                        <li>Pentesting avancé</li>
+                        <li>Exploitation des failles</li>
+                        <li>Red Teaming impérial</li>
                     </ul>
+                    <div class="skill-meter">
+                        <div class="meter-fill" style="width: 98%"></div>
+                    </div>
                 </div>
 
-                <div class="skill-card">
-                    <i class="ri-magic-line"></i>
-                    <h3>Force & Combat</h3>
+                <div class="skill-card defensive">
+                    <div class="card-header">
+                        <i class="ri-database-2-line"></i>
+                        <h3>Défensive</h3>
+                    </div>
                     <ul>
-                        <li>Maîtrise du sabre laser</li>
-                        <li>Télékinésie avancée</li>
-                        <li>Étranglement à distance</li>
+                        <li>Architecture sécurisée</li>
+                        <li>Analyse des menaces</li>
+                        <li>Gestion des incidents</li>
                     </ul>
+                    <div class="skill-meter">
+                        <div class="meter-fill" style="width: 95%"></div>
+                    </div>
                 </div>
 
-                <div class="skill-card">
-                    <i class="ri-shield-star-line"></i>
-                    <h3>Gestion Impériale</h3>
+                <div class="skill-card cybernetic">
+                    <div class="card-header">
+                        <i class="ri-cpu-line"></i>
+                        <h3>Cybernétique</h3>
+                    </div>
                     <ul>
-                        <li>Supervision de méga-projets</li>
-                        <li>Négociations agressives</li>
-                        <li>Résolution de conflits définitive</li>
+                        <li>DarkOS™ Expert</li>
+                        <li>Solutions intégrées</li>
+                        <li>Protocoles propriétaires</li>
                     </ul>
+                    <div class="skill-meter">
+                        <div class="meter-fill" style="width: 100%"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -156,26 +185,60 @@
 
     <section id="projets" class="projects-section">
         <div class="container">
-            <h2 class="section-title">Réalisations Galactiques</h2>
+            <h2 class="section-title">Projets Classifiés</h2>
             
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-image">
-                        <img src="sources/deathstar.jpg" alt="Étoile de la Mort">
-                        <div class="project-overlay">
-                            <h3>Étoile de la Mort</h3>
-                            <p>Station spatiale de combat ultime</p>
-                        </div>
+                    <div class="project-header">
+                        <i class="ri-server-line"></i>
+                        <span class="security-level">NIVEAU 5</span>
+                    </div>
+                    <h3>SithFirewall™</h3>
+                    <p>Système de pare-feu basé sur l'IA et la Force</p>
+                    <ul class="project-features">
+                        <li>Protection contre les attaques Jedi</li>
+                        <li>Détection d'intrusion avancée</li>
+                        <li>99.9% de taux de blocage</li>
+                    </ul>
+                    <div class="project-footer">
+                        <span class="project-status">ACTIF</span>
+                        <button class="btn imperial-btn">Accès restreint</button>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <div class="project-image">
-                        <img src="sources/empire.jpg" alt="Empire Galactique">
-                        <div class="project-overlay">
-                            <h3>Domination Impériale</h3>
-                            <p>Expansion et contrôle galactique</p>
-                        </div>
+                    <div class="project-header">
+                        <i class="ri-database-2-line"></i>
+                        <span class="security-level">NIVEAU 4</span>
+                    </div>
+                    <h3>DarkForce™ Encryption</h3>
+                    <p>Protocole de cryptographie quantique</p>
+                    <ul class="project-features">
+                        <li>Chiffrement post-quantique</li>
+                        <li>Authentification biométrique</li>
+                        <li>Résistant aux attaques de Force</li>
+                    </ul>
+                    <div class="project-footer">
+                        <span class="project-status">EN PRODUCTION</span>
+                        <button class="btn imperial-btn">Documentation</button>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="ri-radar-line"></i>
+                        <span class="security-level">NIVEAU 3</span>
+                    </div>
+                    <h3>RebelScan</h3>
+                    <p>Système de détection des rebelles</p>
+                    <ul class="project-features">
+                        <li>Analyse comportementale</li>
+                        <li>Détection d'anomalies</li>
+                        <li>Réponse automatisée</li>
+                    </ul>
+                    <div class="project-footer">
+                        <span class="project-status">DÉPLOYÉ</span>
+                        <button class="btn imperial-btn">Rapports</button>
                     </div>
                 </div>
             </div>
@@ -185,38 +248,60 @@
 
     <section id="contact" class="contact-section">
         <div class="container">
-            <h2 class="section-title">Communication Impériale</h2>
+            <h2 class="section-title">Canal de Communication</h2>
             
             <div class="contact-grid">
                 <div class="contact-info">
-                    <h3>Coordonnées de Commandement</h3>
-                    <ul class="contact-list">
-                        <li>
-                            <i class="ri-mail-line"></i>
-                            <a href="mailto:DarkVador@EmpireGalactic.com">DarkVador@EmpireGalactic.com</a>
-                        </li>
-                        <li>
-                            <i class="ri-discord-line"></i>
-                            <span>@DarthHeavyBreather#1977</span>
-                        </li>
-                        <li>
-                            <i class="ri-instagram-line"></i>
-                            <span>@Respiration_Gothique</span>
-                        </li>
-                    </ul>
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <span class="terminal-title">contact_info.sh</span>
+                        </div>
+                        <div class="terminal-content">
+                            <p><span class="prompt">$</span> cat contact.txt</p>
+                            <ul class="contact-list">
+                                <li>
+                                    <i class="ri-mail-line"></i>
+                                    <span>DarkVador@CyberSithEmpire.gal</span>
+                                </li>
+                                <li>
+                                    <i class="ri-git-repository-line"></i>
+                                    <span>git.sithcode.empire/darkvador</span>
+                                </li>
+                                <li>
+                                    <i class="ri-discord-line"></i>
+                                    <span>@LordOfEncryption#1977</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
                 <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" placeholder="Votre nom" required>
+                    <div class="form-header">
+                        <i class="ri-lock-line"></i>
+                        <span>Canal sécurisé - Chiffrement DarkForce™</span>
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="Votre email" required>
+                        <input type="text" placeholder="Identifiant système" required>
                     </div>
                     <div class="form-group">
-                        <textarea placeholder="Votre message pour l'Empire" required></textarea>
+                        <input type="email" placeholder="Adresse de communication" required>
                     </div>
-                    <button type="submit" class="btn imperial-btn">Envoyer</button>
+                    <div class="form-group">
+                        <select required>
+                            <option value="">Niveau d'accréditation</option>
+                            <option value="1">Niveau 1 - Standard</option>
+                            <option value="2">Niveau 2 - Confidentiel</option>
+                            <option value="3">Niveau 3 - Secret</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Message crypté" required></textarea>
+                    </div>
+                    <button type="submit" class="btn imperial-btn">
+                        <i class="ri-send-plane-line"></i>
+                        Transmission sécurisée
+                    </button>
                 </form>
             </div>
         </div>
