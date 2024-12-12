@@ -1,94 +1,223 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Protfolio Website</title>
+    <title>Dark Vador | CyberFolio Impérial</title>
     <link rel="stylesheet" href="css/style.css">
-    
-    <!-- Remix Icon CDN -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
-    <!-- Splide js CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
 </head>
 <body>
-   <!-- Navigation Bar -->
    <nav class="navbar">
     <div class="logo">
-            <a href="#">Portfolio</a>
+        <a href="#">Lord Vador</a>
     </div>
     <i class="ri-menu-fill" id="open_menu"></i>
     <ul class="menu">
-        <li><a href="sources/etoile_mamadou.png">Home</a></li>
-        <li><a href="#A Propos">A Propos</a></li>
-        <li><a href="#Services">Services</a></li>
-        <li><a href="#Projets">Projets</a></li>
-        <li><a href="#Contact">Contact</a></li>
-        <div><button class="btn">
-            <a href="#">Suivez-moi</a>
-        </button></div>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#a-propos">À Propos</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
     </ul>
 
-    <!-- sidebar menu-->
-     <div class="sidebar_menu">
+    <div class="sidebar_menu">
         <ul class="sidebar_top">
             <li>
                 <div class="logo sidebar_logo">
-                    <a href="#">Portfolio</a>
+                    <a href="#">Empire Galactique</a>
                 </div>
-                <i class="ri-close-large-fill" id="close_menu"></i>
+                <i class="ri-close-line" id="close_menu"></i>
             </li>
-            <li><a href="sources/etoile_mamadou.png">Home</a></li>
-            <li><a href="#A Propos">A Propos</a></li>
-            <li><a href="#Services">Services</a></li>
-            <li><a href="#Projets">Projets</a></li>
-            <li><a href="#Contact">Contact</a></li>
+            <li><a href="#accueil"><i class="ri-home-4-line"></i> Accueil</a></li>
+            <li><a href="#a-propos"><i class="ri-user-line"></i> À Propos</a></li>
+            <li><a href="#competences"><i class="ri-sword-line"></i> Compétences</a></li>
+            <li><a href="#projets"><i class="ri-planet-line"></i> Projets</a></li>
+            <li><a href="#contact"><i class="ri-message-2-line"></i> Contact</a></li>
         </ul>
 
-
         <div class="sidebar_bottom">
-            <button class="btn"><a href="#">+ Suivez-moi</a></button>
+            <button class="btn imperial-btn">
+                <a href="#contact">Rejoindre le Côté Obscur</a>
+            </button>
             <div class="social_Icon">
-                <i class="ri-facebook-fill"></i>
-                <i class="ri-twitter-fill"></i>
-                <i class="ri-instagram-fill"></i>
-                <i class="ri-linkedin-fill"></i>
+                <a href="#" title="Holonet"><i class="ri-global-line"></i></a>
+                <a href="#" title="Transmissions Impériales"><i class="ri-broadcast-line"></i></a>
+                <a href="#" title="Communications Galactiques"><i class="ri-space-ship-line"></i></a>
+                <a href="#" title="Base de Données Impériale"><i class="ri-database-2-line"></i></a>
             </div>
         </div>
-     </div>
-   </nav>
-    
-    <div class="spacer"></div>
-
-    <div class="vader-intro">
-      <p class="vader-name">
-        <span class="label">Nom complet :</span>
-        <span class="name">Anakin Skywalker, alias Dark Vador</span>
-        <span class="note">(oui, j'ai changé de nom. Ça arrive.)</span>
-      </p>
     </div>
+   </nav>
 
-    <section id="A Propos">
-        <h2>A Propos</h2>
-        <p>Je suis Dark Vador, maître du Côté Obscur, expert en domination galactique et étrangleur de Force occasionnel.</p>
-        <img src="https://via.placeholder.com/800x400" alt="Dark Vador dramatique">
+   <section id="accueil" class="hero-section">
+        <div class="hero-content">
+            <h1>Dark Vador</h1>
+            <p class="tagline">"Ce n'est pas parce que je suis dans le côté obscur que je ne peux pas briller."</p>
+            <div class="hero-cta">
+                <button class="btn imperial-btn">
+                    <a href="#contact">Rejoignez l'Empire</a>
+                </button>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+   </section>
+
+   <section id="a-propos" class="about-section">
+    <div class="container">
+        <h2 class="section-title">À Propos du Seigneur Noir</h2>
+        
+        <div class="about-grid">
+            <div class="about-image">
+                <img src="sources/vader-portrait.jpg" alt="Dark Vador dramatique">
+                <div class="image-overlay"></div>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-card">
+                    <h3>Qui suis-je ?</h3>
+                    <p class="about-text">Seigneur Sith, Commandant Suprême de l'Empire Galactique et Roi des Respirations ASMR. Mon parcours m'a mené du statut de Jedi prometteur à celui d'icône galactique de l'ordre et de la puissance.</p>
+                </div>
+
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <i class="ri-sword-fill"></i>
+                        <span class="stat-number">1000+</span>
+                        <span class="stat-label">Rebelles neutralisés</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="ri-planet-fill"></i>
+                        <span class="stat-number">50K+</span>
+                        <span class="stat-label">Systèmes conquis</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="ri-team-fill"></i>
+                        <span class="stat-number">1M+</span>
+                        <span class="stat-label">Stormtroopers commandés</span>
+                    </div>
+                </div>
+
+                <div class="about-quote">
+                    <i class="ri-double-quotes-l"></i>
+                    <p>"Ne sous-estimez jamais le pouvoir de l'obscurité... ni ma capacité à faire une entrée dramatique."</p>
+                </div>
+
+                <div class="about-hobbies">
+                    <h4>Centres d'intérêt</h4>
+                    <ul>
+                        <li><i class="ri-gamepad-fill"></i> Spatio-foot avec Loan ORDVPN</li>
+                        <li><i class="ri-fire-fill"></i> Sabre laser artistique</li>
+                        <li><i class="ri-star-fill"></i> Contemplation stellaire depuis l'Étoile de la Mort</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="competences" class="skills-section">
+        <div class="container">
+            <h2 class="section-title">Compétences Impériales</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="ri-sword-line"></i>
+                    <h3>Leadership Stratégique</h3>
+                    <ul>
+                        <li>Commandement d'armées interstellaires</li>
+                        <li>Discours intimidants</li>
+                        <li>Team building radical</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <i class="ri-magic-line"></i>
+                    <h3>Force & Combat</h3>
+                    <ul>
+                        <li>Maîtrise du sabre laser</li>
+                        <li>Télékinésie avancée</li>
+                        <li>Étranglement à distance</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <i class="ri-shield-star-line"></i>
+                    <h3>Gestion Impériale</h3>
+                    <ul>
+                        <li>Supervision de méga-projets</li>
+                        <li>Négociations agressives</li>
+                        <li>Résolution de conflits définitive</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="Projets">
-        <h2>Mes Projets</h2>
-        <p>Découvrez mes réalisations les plus spectaculaires : de la supervision de l'Étoile de la Mort à mes duels épiques.</p>
-        <img src="https://via.placeholder.com/800x400" alt="Étoile de la Mort">
-        <img src="https://via.placeholder.com/800x400" alt="Combat au sabre laser">
+    <section id="projets" class="projects-section">
+        <div class="container">
+            <h2 class="section-title">Réalisations Galactiques</h2>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="sources/deathstar.jpg" alt="Étoile de la Mort">
+                        <div class="project-overlay">
+                            <h3>Étoile de la Mort</h3>
+                            <p>Station spatiale de combat ultime</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="sources/empire.jpg" alt="Empire Galactique">
+                        <div class="project-overlay">
+                            <h3>Domination Impériale</h3>
+                            <p>Expansion et contrôle galactique</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="Contact">
-        <h2>Contact</h2>
-        <p>Envoyez-moi un hologramme :</p>
-        <p>Email : <a href="mailto:DarkVador@EmpireGalactic.com">DarkVador@EmpireGalactic.com</a></p>
-        <p>Discord : <a href="#">@DarthHeavyBreather#1977</a></p>
-        <p>Email : <a href="#">@Respiration_Gothique</a></p>
-        <p>Email : <a href="#">Lord_Vador_Officiel</a></p>
-        <p>Coordonnées : <a href="sources/explosion_mamadou.jpeg">Partout où ça explose</a></p>
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Communication Impériale</h2>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Coordonnées de Commandement</h3>
+                    <ul class="contact-list">
+                        <li>
+                            <i class="ri-mail-line"></i>
+                            <a href="mailto:DarkVador@EmpireGalactic.com">DarkVador@EmpireGalactic.com</a>
+                        </li>
+                        <li>
+                            <i class="ri-discord-line"></i>
+                            <span>@DarthHeavyBreather#1977</span>
+                        </li>
+                        <li>
+                            <i class="ri-instagram-line"></i>
+                            <span>@Respiration_Gothique</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Votre nom" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Votre email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Votre message pour l'Empire" required></textarea>
+                    </div>
+                    <button type="submit" class="btn imperial-btn">Envoyer</button>
+                </form>
+            </div>
+        </div>
     </section>
 
     <footer>
